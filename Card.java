@@ -1,218 +1,106 @@
 public class Card {
 
 
-
-    //start attributes
-
-    //size
-    private int heigthCard;
-    private int widthCard;
-
-    //card's number
+    //attributes
     private int number;
-
-    //card's value
     private int value;
+    private String row3;
+    private String row4;
+    private String row5;
+    private String row6;
+    private String row7;
+    private String row8;
+    private String row9;
 
-    //end attributes
-
-
-    //start constructor
+    //constructors
     public Card(int number, int value) {
-        this.heigthCard = 11;
-        this.widthCard = 16;
         this.number = number;
         this.value = value;
-    }
-    //end constructor
-
-    //start accessors
-    public int getHeigthCard() {
-        return this.heigthCard;
-    }
-
-    public int getWidthCard() {
-        return this.widthCard;
+        this.row3 = "";
+        this.row4 = "";
+        this.row5 = "";
+        this.row6 = "";
+        this.row7 = "";
+        this.row8 = "";
+        this.row9 = "";
     }
 
+    //accessors
     public int getNumber() {
         return this.number;
     }
-
     public int getValue() {
         return this.value;
     }
-    //end accessors
+    public String getRow3() {
+        return this.row3;
+    }
+    public String getRow4() {
+        return this.row4;
+    }
+    public String getRow5() {
+        return this.row5;
+    }
+    public String getRow6() {
+        return this.row6;
+    }
+    public String getRow7() {
+        return this.row7;
+    }
+    public String getRow8() {
+        return this.row8;
+    }
+    public String getRow9() {
+        return this.row9;
+    }
 
-    //start mutators
+    //mutators
     public void setNumber(int number) {
         this.number = number;
     }
-
     public void setValue(int value) {
         this.value = value;
     }
-    //end mutators
-
-    //funtions
-    public void printCard(int number) {
-
-        switch (number) {
-            case 1:
-                System.out.println();
-                for (int row = 1;row <= this.heigthCard; row++) {
-                    System.out.print(" ");
-                    for (int col = 1;col <= this.widthCard; col++) {
-                        System.out.print("X");
-                    }
-                    System.out.print(" ");
-                    System.out.println();
-                }
-                System.out.println(" ");
-                break;
-            case 2:
-                
-                break;
-            case 3:
-                
-                break;
-            case 4:
-                
-                break;
-            case 5:
-                
-                break;
-            case 6:
-                
-                break;
-            case 7:
-                
-                break;
-            case 8:
-                
-                break;
-            case 9:
-                
-                break;
-            case 10:
-                
-                break;
-            case 11:
-                
-                break;
-            case 12:
-                
-                break;
-            case 13:
-                
-                break;       
-            default:
-
-                break;
-        }
+    public void setRow3(String row3) {
+        this.row3 = row3;
+    }
+    public void setRow4(String row4) {
+        this.row4 = row4;
+    }
+    public void setRow5(String row5) {
+        this.row5 = row5;
+    }
+    public void setRow6(String row6) {
+        this.row6 = row6;
+    }
+    public void setRow7(String row7) {
+        this.row7 = row7;
+    }
+    public void setRow8(String row8) {
+        this.row8 = row8;
+    }
+    public void setRow9(String row9) {
+        this.row9 = row9;
     }
 
+    public void printCard() {
+        System.out.println();
+        System.out.println(" XXXXXXXXXXXXXXXX"+" ");     //row 1
+        System.out.println(" X              X"+" ");     //row 2
+        System.out.println(" X " + this.getRow3() + " X"+" ");   //row 3
+        System.out.println(" X " + this.getRow4() + " X"+" ");   //row 4
+        System.out.println(" X " + this.getRow5() + " X"+" ");   //row 5
+        System.out.println(" X " + this.getRow6() + " X"+" ");   //row 6
+        System.out.println(" X " + this.getRow7() + " X"+" ");   //row 7
+        System.out.println(" X " + this.getRow8() + " X"+" ");   //row 8
+        System.out.println(" X " + this.getRow9() + " X"+" ");   //row 9
+        System.out.println(" X              X"+" ");     //row 10
+        System.out.println(" XXXXXXXXXXXXXXXX"+" ");     //row 11
+        System.out.println();
+    }
 }
 
-    /*  
-           width = 16
-           heigth = 11
-
-        XXXXXXXXXXXXXXXX
-        x              x
-    h   x     AAAA     x
-    e   x   AAAAAAAA   x
-    i   x AAAA    AAAA x
-    g   x AAAA    AAAA x
-    t   x AAAAAAAAAAAA x
-    h   x AAAA    AAAA x
-        x AAAA    AAAA x
-        x              x
-        xxxxxxxxxxxxxxxx
-
-        xxxxxxxxxxxxxxxx
-        x              x
-    h   x   22222222   x
-    e   x 2222    2222 x
-    i   x         2222 x
-    g   x     222222   x
-    t   x   2222       x
-    h   x 2222         x
-        x 222222222222 x
-        x              x
-        xxxxxxxxxxxxxxxx
-
-        xxxxxxxxxxxxxxxx
-        x              x
-    h   x   33333333   x
-    e   x 3333    3333 x
-    i   x         3333 x
-    g   x     333333   x
-    t   x         3333 x
-    h   x 3333    3333 x
-        x   33333333   x
-        x              x
-        xxxxxxxxxxxxxxxx
-
-        xxxxxxxxxxxxxxxx
-        x              x
-    h   x 4444    4444 x
-    e   x 4444    4444 x
-    i   x 4444    4444 x
-    g   x 4444    4444 x
-    t   x   4444444444 x
-    h   x        44444 x
-        x        44444 x
-        x              x
-        xxxxxxxxxxxxxxxx
-
-        xxxxxxxxxxxxxxxx
-        x              x
-    h   x 555555555555 x
-    e   x 5555         x
-    i   x 5555555555   x
-    g   x         5555 x
-    t   x         5555 x
-    h   x 5555    5555 x
-        x   55555555   x
-        x              x
-        xxxxxxxxxxxxxxxx
-
-        xxxxxxxxxxxxxxxx
-        x              x
-    h   x   66666666   x
-    e   x 6666    6666 x
-    i   x 6666         x
-    g   x 6666666666   x
-    t   x 6666    6666 x
-    h   x 6666    6666 x
-        x   66666666   x
-        x              x
-        xxxxxxxxxxxxxxxx
-
-        xxxxxxxxxxxxxxxx
-        x              x
-    h   x 777777777777 x
-    e   x         7777 x
-    i   x       7777   x
-    g   x     7777     x
-    t   x     7777     x
-    h   x     7777     x
-        x     7777     x
-        x              x
-        xxxxxxxxxxxxxxxx
-
-        xxxxxxxxxxxxxxxx
-        x              x
-    h   x   88888888   x
-    e   x 8888    8888 x
-    i   x 8888    8888 x
-    g   x   88888888   x
-    e   x 8888    8888 x
-    i   x 8888    8888 x
-        x   88888888   x
-        x              x
-        xxxxxxxxxxxxxxxx
+    /*
 
         xxxxxxxxxxxxxxxx
         x              x
